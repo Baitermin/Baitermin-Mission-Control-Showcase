@@ -148,14 +148,18 @@ A widebody, wing or aggressive wheels in `hero_max` are visual storytelling — 
 
 ## Visual routing: from intent to approved asset
 
-Production workflow talks to the visual system in terms of **intent**, not raw file paths:
+Content strategy talks to the visual system in terms of **intent**, not raw file paths:
 
 ```text
-Production Intent
+Content Strategy
+      ↓
+Production Visual Intent
       ↓
 Visual Routing Policy
       ↓
 Approved Visual Mode / Asset
+      ↓
+Production Workflow
 ```
 
 Examples:
@@ -169,7 +173,7 @@ The routing policy only ever selects from already-approved visual modes/assets. 
 
 > **Designed or modified visuals are presentation assets, not factual evidence of real-world modifications.**
 
-A production-facing visual routing capability is now available for downstream workflow integration. This is incremental progress toward the Production Workflow Integration milestone below — it does not yet mean a production agent consumes it end-to-end.
+Production visual intent is now carried from content strategy into the production workflow and resolved through the approved visual-routing layer. Illustrated vehicle assets can now be selected and delivered into production context, while direct composition of those assets into final video frames remains future integration work.
 
 ---
 
@@ -278,6 +282,7 @@ The private implementation is actively evolving and is ahead of this sanitized p
 - ✅ `hero_base` / `hero_max` vehicle-art variant architecture
 - ✅ real Stage 7 content prototype with grounded research + user-owned footage
 - ✅ production-facing visual-intent routing capability (Production Intent → Visual Routing Policy → Approved Visual Mode/Asset)
+- ✅ production workflow now carries visual intent from content strategy into production and resolves it through that routing layer
 
 ### Current focus
 
@@ -297,7 +302,7 @@ The first production integration is intentionally planned to stop at **Awaiting 
 
 No Publisher is part of that stage.
 
-The visual-intent routing capability described above is the first concrete building block toward this milestone. Agent-level, end-to-end consumption of that capability is still ahead.
+Production visual intent now flows from content strategy into the production workflow and is resolved through the routing layer described above. Illustrated vehicle assets can be selected and delivered into production context; composing them directly into final rendered video frames, and extending this into Verifyer/Human Review, remains the next step.
 
 ---
 
