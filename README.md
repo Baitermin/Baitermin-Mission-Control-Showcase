@@ -146,6 +146,33 @@ A widebody, wing or aggressive wheels in `hero_max` are visual storytelling — 
 
 ---
 
+## Visual routing: from intent to approved asset
+
+Production workflow talks to the visual system in terms of **intent**, not raw file paths:
+
+```text
+Production Intent
+      ↓
+Visual Routing Policy
+      ↓
+Approved Visual Mode / Asset
+```
+
+Examples:
+
+- OEM / factual presentation → clean base vehicle visual
+- tuning / performance presentation → performance-oriented hero visual
+- real proof → real footage
+- hybrid compositions → an independent hybrid mode, never a fallback
+
+The routing policy only ever selects from already-approved visual modes/assets. An explicit request for the performance-oriented visual never silently receives the base visual instead, and no new artwork is ever generated automatically.
+
+> **Designed or modified visuals are presentation assets, not factual evidence of real-world modifications.**
+
+A production-facing visual routing capability is now available for downstream workflow integration. This is incremental progress toward the Production Workflow Integration milestone below — it does not yet mean a production agent consumes it end-to-end.
+
+---
+
 ## Privacy-first automotive media
 
 Real car footage creates a recurring privacy problem: registration plates.
@@ -250,6 +277,7 @@ The private implementation is actively evolving and is ahead of this sanitized p
 - ✅ visible flame / real source-audio production proof
 - ✅ `hero_base` / `hero_max` vehicle-art variant architecture
 - ✅ real Stage 7 content prototype with grounded research + user-owned footage
+- ✅ production-facing visual-intent routing capability (Production Intent → Visual Routing Policy → Approved Visual Mode/Asset)
 
 ### Current focus
 
@@ -268,6 +296,8 @@ Human Review
 The first production integration is intentionally planned to stop at **Awaiting Human Review**.
 
 No Publisher is part of that stage.
+
+The visual-intent routing capability described above is the first concrete building block toward this milestone. Agent-level, end-to-end consumption of that capability is still ahead.
 
 ---
 
