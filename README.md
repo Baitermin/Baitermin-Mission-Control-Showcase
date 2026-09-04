@@ -2,159 +2,332 @@
 
 # 🧠 Baitermin Mission Control
 
-### BAITERMIN AI HQ
+### Local-first multi-agent automotive content operations
 
-A sci-fi inspired visual command center for **multi-HQ AI content workflows**.
-
-![Repository](https://img.shields.io/badge/Source-Private-6e7681?style=flat-square&logo=github)
+![Source](https://img.shields.io/badge/Production_Source-Private-6e7681?style=flat-square&logo=github)
 ![Status](https://img.shields.io/badge/Status-Active_Development-f59e0b?style=flat-square)
-![React](https://img.shields.io/badge/React-19-20232A?style=flat-square&logo=react&logoColor=61DAFB)
-![TypeScript](https://img.shields.io/badge/TypeScript-6-3178C6?style=flat-square&logo=typescript&logoColor=white)
-![Vite](https://img.shields.io/badge/Vite-8-646CFF?style=flat-square&logo=vite&logoColor=white)
-![PixiJS](https://img.shields.io/badge/PixiJS-8-E91E63?style=flat-square)
-![Zustand](https://img.shields.io/badge/Zustand-State-orange?style=flat-square)
+![Human Review](https://img.shields.io/badge/Human_Review-Required-8b5cf6?style=flat-square)
+![Publishing](https://img.shields.io/badge/Auto_Publishing-Disabled-ef4444?style=flat-square)
 
 </div>
 
----
+> **Public showcase only.** The real Baitermin Mission Control ecosystem is developed in a private repository. This repository intentionally contains no credentials, private databases, raw user media, agent memory, provider configuration, or sensitive runtime state.
 
-## Overview
+![Command Deck overview](assets/command-deck-overview.svg)
 
-Baitermin Mission Control is a personal AI content platform designed as an interactive space-station command interface rather than a conventional SaaS dashboard.
+## What is Baitermin Mission Control?
 
-Each future **HQ** represents an independent brand or channel identity. AI agents will work through repeatable content workflows inside that HQ:
+Baitermin Mission Control is a local-first multi-agent production system I am building for automotive short-form content.
 
-> **Research → Create → Publish → Analyze → Learn → Repeat**
+The system combines specialized AI agents with deterministic local tooling for research, scripting, video production, privacy processing, quality assurance and human review.
 
-The production source repository is private while the system is under active development. This repository is the public showcase for the concept, current implementation and roadmap.
+The core principle is simple:
 
----
+> **Automate the production pipeline, but keep important decisions human-controlled.**
 
-## Current Status
-
-**Phase 1 — Mission Control Foundation is complete.**  
-**Phase 2 — Multi-HQ & Mission Architecture is in progress.**
-
-The current implementation proves the visual and interaction model with a local mock mission and deterministic mock workflow. Real AI agents, durable backend execution and publishing integrations arrive in later phases.
-
-### Phase 1 delivered
-
-- Interactive **2400 × 1600** virtual station world
-- Eight themed agent rooms
-- PixiJS-based station rendering
-- Drag-to-pan and wheel-to-zoom viewport
-- Interactive agent tokens
-- Hover and selection states
-- Five visually distinct runtime statuses
-- React agent-detail overlay
-- Deterministic multi-stage mock mission workflow
-- Start / cancel / reset mission controls
-- Historical analytics panel
-- Cinematic station atmosphere and visual polish
-- Race-safe workflow cancellation and UI interaction handling
-- Automated headless and browser-level verification during development
-
-### Phase 2 started
-
-The project is now moving from one hardcoded station toward a reusable domain model for:
-
-- Multiple HQs
-- Agent archetypes and instances
-- Durable missions
-- HQ identity and language
-- Generic research workflows
-- Content modes and content streams
-- Mission composition
-- Safety and settings foundations
+The project has evolved from an early visual HQ prototype into a real operational Command Deck with working agent orchestration, video rendering, QA, revision history and human approval workflows.
 
 ---
 
-## Product Vision
+## Current workflow
 
-Mission Control is intended to become a system where multiple specialized AI agents can cooperate around a brand's complete content lifecycle while keeping the user in control.
+![Agent workflow](assets/workflow.svg)
 
-Examples of future responsibilities include:
+The production roles are deliberately separated:
 
-- Trend and subject research
-- Content ideation
-- Script and copy generation
-- Visual production
-- Narration and media assembly
-- Quality control
-- Publishing
-- Analytics and learning
-- Community intelligence
+- **Baiter** — research, content strategy, briefs and grounded content planning.
+- **Render** — deterministic/local video production and media assembly.
+- **Verifyer** — technical, visual, factual and privacy QA.
+- **Human Review** — the final decision gate before any future publishing stage.
 
-The visual HQ is not only decoration: rooms, agents, mission states and activity are intended to make an otherwise invisible AI workflow understandable at a glance.
+Approving a video in Human Review **does not publish it**.
 
 ---
 
-## Roadmap
+## Command Deck
 
-| Phase | Scope | Status |
-| --- | --- | --- |
-| 1 | Mission Control visual foundation & mock workflow | ✅ Complete |
-| 2 | Multi-HQ & mission architecture | 🟡 In progress |
-| 3 | Durable real AI agent runtime | ⬜ Planned |
-| 4 | AI content factory | ⬜ Planned |
-| 5 | Knowledge, assets & community intelligence | ⬜ Planned |
-| 6 | Platform intelligence & publishing | ⬜ Planned |
-| 7 | Autonomous AI HQ | ⬜ Planned |
+The Command Deck is the operational dashboard for the ecosystem.
 
----
+It currently surfaces:
 
-## Architecture
+- live agent state
+- active/completed task metrics
+- task activity history
+- system health
+- latest production activity
+- task queue state
+- per-agent runtime visibility
+- direct links to reports and review artifacts
 
-### Interface
+The UI is designed to make an otherwise invisible multi-agent workflow understandable at a glance.
 
-- **React 19**
-- **TypeScript 6**
-- **Vite 8**
-
-### Visual World
-
-- **PixiJS 8** for rendering
-- **pixi-viewport** for world navigation
-- Fixed world-coordinate station model
-- DOM overlays separated from the Pixi world transform
-
-### State
-
-- **Zustand** for agent and mission runtime state
-- Domain configuration separated from rendering layers
-- Deterministic workflow simulation for the current foundation phase
-
-### Quality
-
-- **Vitest**
-- **oxlint**
-- TypeScript production builds
-- Browser-level interaction verification used throughout Phase 1
+![Command Deck](assets/command-deck-overview.svg)
 
 ---
 
-## Design Principles
+## Human Review Queue
 
-- **Visual first:** complex AI workflows should be understandable without reading logs.
-- **Multi-HQ by design:** one HQ represents one brand, while the architecture remains reusable.
-- **Human control:** autonomy should increase gradually rather than hiding important decisions.
-- **Provider independence:** future AI runtime layers should not lock the system to a single model provider.
-- **Deterministic foundations:** workflow durability, safety and state transitions should not depend on an LLM making infrastructure decisions.
+The Review Queue is the safety gate between automated production and any future publishing workflow.
+
+Current capabilities include:
+
+- video playback directly inside the review screen
+- version selection (`V1`, `V2`, `V3`, ...)
+- Baiter brief access
+- Render production report access
+- Verifyer QA verdict access
+- **Approve** / **Request Revision** / **Reject**
+- immutable human review history
+- Change Decision support while preserving audit history
+- thread-wide review history across versions
+- automatic selection of a Waiting review when the page opens
+- automatic advance to the next Waiting review after a decision, when one exists
+- polling that never steals the review the user is currently watching
+
+![Review Queue](assets/review-queue.svg)
+
+The latest UX improvement keeps the review flow fast without making any decision automatically.
 
 ---
 
-## Privacy & Source Code
+## Visual production system
 
-The production Mission Control repository is private while the architecture and product are still evolving.
+A major part of Mission Control is a reusable vertical automotive video system.
 
-This public showcase intentionally contains **no credentials, private configuration or proprietary implementation source code**.
+The current foundation includes:
+
+- 1080×1920 / 30fps vertical rendering
+- illustrated scenes
+- real-footage scenes
+- hybrid scenes
+- reusable Baitermin mascot poses
+- local voiceover generation
+- caption timing and motion presets
+- original reusable vehicle art
+- source-audio / exhaust-audio beats
+- deterministic FFmpeg validation
+- privacy-safe user-owned media derivatives
+
+The goal is a repeatable production style inspired by modern short-form automotive explainers while keeping the actual visual identity original to Baitermin.
+
+---
+
+## Vehicle art: `hero_base` + `hero_max`
+
+Each important vehicle family can now support two separate illustrated roles.
+
+### `hero_base`
+
+Used when the video is explaining the actual vehicle/platform:
+
+- OEM specifications
+- stock comparisons
+- engine/platform explanation
+- buying-guide context
+- factual base-car scenes
+
+### `hero_max`
+
+Used for more aggressive channel visuals:
+
+- tuning/performance hooks
+- modified-build discussion
+- transition hero shots
+- channel identity
+- high-energy automotive scenes
+
+The F20 family is the first implementation of this model.
+
+A permanent rule keeps visuals and facts separate:
+
+> **Visual modification does not create factual evidence.**
+
+A widebody, wing or aggressive wheels in `hero_max` are visual storytelling — not claims that the stock car came that way.
+
+---
+
+## Privacy-first automotive media
+
+Real car footage creates a recurring privacy problem: registration plates.
+
+Mission Control now uses a plate-aware privacy pipeline designed to target the **physical registration plate**, not a giant generic rectangle over the back of the vehicle.
+
+```text
+raw user-owned media
+        ↓
+logical media id
+        ↓
+plate localization + tracking
+        ↓
+small privacy mask
+        ↓
+privacy-safe derivative
+        ↓
+Render
+        ↓
+Verifyer
+        ↓
+Human Review
+```
+
+Important behavior:
+
+- raw media stays unchanged
+- the plate is tracked rather than the whole rear of the car
+- uncertainty fails closed instead of creating an enormous blur region
+- background plates can be treated independently
+- privacy-safe can still fail visual QA if masking is excessive
+
+This was validated against real user-owned footage before being accepted as the current privacy direction.
+
+---
+
+## Grounded research & content claims
+
+The content architecture is moving toward production packages where factual statements are traceable instead of being generated from model memory alone.
+
+Claims can be separated into categories such as:
+
+- OEM specifications
+- tuner claims
+- dyno/test results
+- current-market information
+- owner-build information
+- qualitative conclusions
+
+Source authority is tracked separately from the type of claim.
+
+For example:
+
+- a BMW specification should prefer a real BMW/primary source
+- a tuner power figure remains a tuner claim
+- a specific Baitermin build figure remains an owner-build claim
+- a secondary aggregator cannot masquerade as an OEM primary source
+
+This separation will become part of the production Baiter → Render → Verifyer pipeline.
+
+---
+
+## Safety architecture
+
+Some of the less visible work is focused on making the workflow safe and predictable.
+
+Current principles include:
+
+- human approval before any future publishing
+- no automatic social posting
+- agent responsibilities remain separated
+- tokenless agent task-control workflow
+- operator credentials stay outside model-visible context
+- logical asset/media IDs rather than arbitrary filesystem paths
+- raw user media remains immutable
+- privacy failures fail closed
+- Render waits for and validates real encoding processes
+- Verifyer does not silently repair bad content — it can block it
+- deterministic tooling is preferred when deterministic tooling is the better fit
+
+---
+
+## Current development status
+
+The private implementation is actively evolving and is ahead of this sanitized public repository.
+
+### Proven / substantially implemented
+
+- ✅ Command Deck operational dashboard
+- ✅ Baiter / Render / Verifyer agent roles
+- ✅ local task orchestration
+- ✅ tokenless task-control migration
+- ✅ Render process safety
+- ✅ Verifyer QA workflow
+- ✅ Human Review Queue
+- ✅ review versions and thread-wide history
+- ✅ controlled revision orchestration foundations
+- ✅ Waiting review auto-selection UX
+- ✅ local voiceover and audio pipeline
+- ✅ illustrated / real-footage / hybrid rendering
+- ✅ plate-aware privacy tracking
+- ✅ visible flame / real source-audio production proof
+- ✅ `hero_base` / `hero_max` vehicle-art variant architecture
+- ✅ real Stage 7 content prototype with grounded research + user-owned footage
+
+### Current focus
+
+The next major milestone is **Production Workflow Integration**:
+
+```text
+Baiter
+  ↓
+Render
+  ↓
+Verifyer
+  ↓
+Human Review
+```
+
+The first production integration is intentionally planned to stop at **Awaiting Human Review**.
+
+No Publisher is part of that stage.
+
+---
+
+## Technology
+
+Mission Control uses a pragmatic local stack rather than forcing every job into one framework:
+
+- JavaScript / Node.js
+- Python
+- HTML / CSS / vanilla browser JavaScript
+- SQLite
+- OpenCV
+- Pillow
+- FFmpeg
+- local TTS
+- Git / GitHub
+- local agent orchestration
+
+Earlier experimental UI work also explored React, TypeScript, Vite and PixiJS. The current operational Command Deck is intentionally much simpler and more direct.
+
+---
+
+## Why this is a showcase repository
+
+The full ecosystem remains private while it is being built.
+
+This public repository exists to show:
+
+- product direction
+- current UI
+- workflow architecture
+- safety philosophy
+- selected sanitized progress
+
+It intentionally does **not** mirror the production source tree.
+
+---
+
+## Project principles
+
+- **Human approval before publication**
+- **Approving does not equal publishing**
+- **Agents have distinct responsibilities**
+- **Research should be traceable to evidence**
+- **Raw user media stays immutable**
+- **Privacy failures fail closed**
+- **Visual privacy must also look good**
+- **Logical IDs instead of arbitrary file paths**
+- **No silent factual invention by Render**
+- **No silent content repair by Verifyer**
+- **Public showcase stays sanitized**
 
 ---
 
 <div align="center">
 
-**Built by [Baitermin](https://github.com/Baitermin)**
+### 🚧 Actively in development
 
-🚧 Baitermin Mission Control is actively being developed.
+The screenshots, architecture and feature list in this repository are updated as the private Mission Control ecosystem evolves.
+
+**Built by [Baitermin](https://github.com/Baitermin)**
 
 </div>
