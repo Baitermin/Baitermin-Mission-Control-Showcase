@@ -1,0 +1,53 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1600" height="900" viewBox="0 0 1600 900">
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#080b12"/><stop offset="1" stop-color="#0d111b"/></linearGradient>
+    <linearGradient id="accent" x1="0" y1="0" x2="1" y2="0"><stop offset="0" stop-color="#22d3ee"/><stop offset="1" stop-color="#a78bfa"/></linearGradient>
+    <filter id="shadow"><feDropShadow dx="0" dy="10" stdDeviation="18" flood-opacity=".35"/></filter>
+  </defs>
+  <rect width="1600" height="900" fill="url(#bg)"/>
+  <rect x="0" y="0" width="1600" height="58" fill="#090c13" stroke="#1b2230"/>
+  <circle cx="28" cy="29" r="4" fill="#68f7c0"/>
+  <text x="42" y="35" fill="#f4f7fb" font-family="Arial,sans-serif" font-size="20" font-weight="700">COMMAND DECK</text>
+  <text x="205" y="34" fill="#68748b" font-family="Arial,sans-serif" font-size="10" letter-spacing="2">BAITERMIN AGENT OPERATIONS</text>
+  <rect x="1352" y="16" rx="15" width="70" height="28" fill="#111722" stroke="#222b3a"/><circle cx="1370" cy="30" r="4" fill="#5ee6b2"/><text x="1381" y="34" fill="#cbd5e1" font-family="Arial" font-size="10" font-weight="700">LIVE</text>
+  <rect x="1430" y="16" rx="15" width="68" height="28" fill="#111722" stroke="#222b3a"/><text x="1446" y="34" fill="#cbd5e1" font-family="Arial" font-size="10" font-weight="700">3 AGENTS</text>
+  <rect x="1507" y="16" rx="15" width="76" height="28" fill="#111722" stroke="#222b3a"/><text x="1521" y="34" fill="#68f7c0" font-family="Arial" font-size="10" font-weight="700">SYSTEM OK</text>
+
+  <g filter="url(#shadow)" font-family="Arial,sans-serif">
+    <g><rect x="44" y="88" width="350" height="122" rx="16" fill="#111621" stroke="#222b3a"/><text x="66" y="116" fill="#7590bf" font-size="11" letter-spacing="1.4">COMPLETED TODAY</text><text x="66" y="163" fill="#fff" font-size="34" font-weight="700">3</text><text x="66" y="188" fill="#60e7b3" font-size="11">+1 vs yesterday</text></g>
+    <g><rect x="410" y="88" width="350" height="122" rx="16" fill="#111621" stroke="#222b3a"/><text x="432" y="116" fill="#7590bf" font-size="11" letter-spacing="1.4">ACTIVE TASKS</text><text x="432" y="163" fill="#fff" font-size="34" font-weight="700">2</text><text x="432" y="188" fill="#90a4c5" font-size="11">pending: 0</text></g>
+    <g><rect x="776" y="88" width="350" height="122" rx="16" fill="#111621" stroke="#222b3a"/><text x="798" y="116" fill="#7590bf" font-size="11" letter-spacing="1.4">FUEL TODAY</text><text x="798" y="163" fill="#fff" font-size="34" font-weight="700">$0.00</text><text x="798" y="188" fill="#90a4c5" font-size="11">cost tracking not reported</text></g>
+    <g><rect x="1142" y="88" width="414" height="122" rx="16" fill="#111621" stroke="#222b3a"/><text x="1164" y="116" fill="#7590bf" font-size="11" letter-spacing="1.4">SYSTEM HEALTH</text><text x="1164" y="163" fill="#68f7c0" font-size="34" font-weight="700">OK</text><text x="1164" y="188" fill="#90a4c5" font-size="11">all monitored services healthy</text></g>
+
+    <rect x="44" y="230" width="960" height="305" rx="16" fill="#111621" stroke="#222b3a"/>
+    <text x="66" y="261" fill="#9ab0d8" font-size="12" font-weight="700" letter-spacing="1.1">TASK ACTIVITY · 30D</text>
+    <text x="878" y="261" fill="#60769e" font-size="10">completed tasks per day</text>
+    <g stroke="#1d2635"><line x1="66" y1="305" x2="978" y2="305"/><line x1="66" y1="365" x2="978" y2="365"/><line x1="66" y1="425" x2="978" y2="425"/><line x1="66" y1="485" x2="978" y2="485"/></g>
+    <path d="M66 485 L610 485 L654 452 L686 485 L770 485 L814 416 L842 306 L874 394 L916 450 L978 430" fill="none" stroke="#ec72c9" stroke-width="4"/>
+    <path d="M66 485 L610 485 L654 452 L686 485 L770 485 L814 416 L842 306 L874 394 L916 450 L978 430 L978 485 Z" fill="#9d70ff" opacity=".08"/>
+    <circle cx="842" cy="306" r="6" fill="#101521" stroke="#9d70ff" stroke-width="3"/>
+
+    <rect x="1020" y="230" width="536" height="305" rx="16" fill="#111621" stroke="#222b3a"/>
+    <text x="1042" y="261" fill="#9ab0d8" font-size="12" font-weight="700" letter-spacing="1.1">AGENTS</text>
+    <text x="1466" y="261" fill="#60769e" font-size="10">3 discovered</text>
+    <circle cx="1057" cy="305" r="4" fill="#66efbc"/><text x="1081" y="310" fill="#fff" font-size="14" font-weight="700">Baiter</text><text x="1081" y="329" fill="#677b9b" font-size="10">Content strategist · idle</text><text x="1490" y="310" fill="#a9b7cc" font-size="11">idle</text>
+    <circle cx="1057" cy="365" r="4" fill="#38d8ee"/><text x="1081" y="370" fill="#fff" font-size="14" font-weight="700">Render</text><text x="1081" y="389" fill="#677b9b" font-size="10">Video producer · task active</text><text x="1472" y="370" fill="#38d8ee" font-size="11">● running</text>
+    <circle cx="1057" cy="425" r="4" fill="#38d8ee"/><text x="1081" y="430" fill="#fff" font-size="14" font-weight="700">Verifyer</text><text x="1081" y="449" fill="#677b9b" font-size="10">Quality reviewer · task active</text><text x="1472" y="430" fill="#38d8ee" font-size="11">● running</text>
+    <line x1="1042" y1="467" x2="1534" y2="467" stroke="#202938"/>
+    <text x="1042" y="493" fill="#9ab0d8" font-size="12" font-weight="700">LATEST ACTIVITY</text><text x="1042" y="518" fill="#6f84a5" font-size="10">Render completed a production draft · report available</text>
+
+    <rect x="44" y="554" width="960" height="280" rx="16" fill="#111621" stroke="#222b3a"/>
+    <text x="66" y="585" fill="#9ab0d8" font-size="12" font-weight="700">DAILY RUNS</text>
+    <g fill="url(#accent)"><rect x="370" y="744" width="48" height="52" rx="5"/><rect x="666" y="704" width="48" height="92" rx="5"/><rect x="734" y="640" width="48" height="156" rx="5"/><rect x="802" y="686" width="48" height="110" rx="5"/><rect x="870" y="744" width="48" height="52" rx="5"/><rect x="938" y="724" width="48" height="72" rx="5"/></g>
+    <line x1="66" y1="796" x2="982" y2="796" stroke="#283142" stroke-width="3"/>
+
+    <rect x="1020" y="554" width="536" height="280" rx="16" fill="#111621" stroke="#222b3a"/>
+    <text x="1042" y="585" fill="#9ab0d8" font-size="12" font-weight="700">TASK QUEUE</text>
+    <text x="1042" y="628" fill="#94a6c0" font-size="12">Pending</text><text x="1518" y="628" fill="#fff" font-size="12" font-weight="700">0</text>
+    <line x1="1042" y1="643" x2="1534" y2="643" stroke="#202938"/>
+    <text x="1042" y="675" fill="#94a6c0" font-size="12">Running</text><text x="1518" y="675" fill="#38d8ee" font-size="12" font-weight="700">2</text>
+    <line x1="1042" y1="690" x2="1534" y2="690" stroke="#202938"/>
+    <text x="1042" y="722" fill="#94a6c0" font-size="12">Done</text><text x="1518" y="722" fill="#68f7c0" font-size="12" font-weight="700">26</text>
+  </g>
+  <text x="44" y="873" fill="#4f5c74" font-family="Arial,sans-serif" font-size="11">Sanitized showcase render · live project UI evolves continuously</text>
+</svg>
