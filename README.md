@@ -159,7 +159,11 @@ Visual Routing Policy
       ↓
 Approved Visual Mode / Asset
       ↓
-Production Workflow
+Production
+      ↓
+Visual Composition
+      ↓
+Rendered Output
 ```
 
 Examples:
@@ -173,7 +177,7 @@ The routing policy only ever selects from already-approved visual modes/assets. 
 
 > **Designed or modified visuals are presentation assets, not factual evidence of real-world modifications.**
 
-Production visual intent is now carried from content strategy into the production workflow and resolved through the approved visual-routing layer. Illustrated vehicle assets can now be selected and delivered into production context, while direct composition of those assets into final video frames remains future integration work.
+Approved illustrated vehicle assets can now be selected, passed into production composition, and rendered into actual visual output — this is real composition, verified against actual rendered frames, not just asset selection or metadata. This capability is available to production; it does not mean every live brief automatically uses it. Visual verification and dedicated Human Review handling of composed illustrated output remain future integration work.
 
 ---
 
@@ -283,6 +287,7 @@ The private implementation is actively evolving and is ahead of this sanitized p
 - ✅ real Stage 7 content prototype with grounded research + user-owned footage
 - ✅ production-facing visual-intent routing capability (Production Intent → Visual Routing Policy → Approved Visual Mode/Asset)
 - ✅ production workflow now carries visual intent from content strategy into production and resolves it through that routing layer
+- ✅ approved illustrated vehicle assets can be composed into real rendered visual output
 
 ### Current focus
 
@@ -302,7 +307,7 @@ The first production integration is intentionally planned to stop at **Awaiting 
 
 No Publisher is part of that stage.
 
-Production visual intent now flows from content strategy into the production workflow and is resolved through the routing layer described above. Illustrated vehicle assets can be selected and delivered into production context; composing them directly into final rendered video frames, and extending this into Verifyer/Human Review, remains the next step.
+Production visual intent now flows from content strategy into the production workflow, is resolved through the routing layer described above, and approved illustrated assets can be composed into real rendered visual output. Extending this into Verifyer validation and a dedicated Human Review path for composed illustrated output remains the next step.
 
 ---
 
