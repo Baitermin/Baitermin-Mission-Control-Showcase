@@ -164,6 +164,10 @@ Production
 Visual Composition
       ↓
 Rendered Output
+      ↓
+Independent Verification
+      ↓
+Human Review
 ```
 
 Examples:
@@ -177,7 +181,31 @@ The routing policy only ever selects from already-approved visual modes/assets. 
 
 > **Designed or modified visuals are presentation assets, not factual evidence of real-world modifications.**
 
-Approved illustrated vehicle assets can now be selected, passed into production composition, and rendered into actual visual output — this is real composition, verified against actual rendered frames, not just asset selection or metadata. This capability is available to production; it does not mean every live brief automatically uses it. Visual verification and dedicated Human Review handling of composed illustrated output remain future integration work.
+Approved illustrated vehicle assets can be selected, passed into production composition, and rendered into actual visual output — this is real composition, verified against actual rendered frames, not just asset selection or metadata.
+
+Composed illustrated output can now be independently verified against production intent and actual composition provenance before entering Human Review. The verification step does not simply trust what production says it used — it checks that claim against its own independently-established expectation and against a tamper-evident record of what was actually composed:
+
+```text
+Expected
+   ↓
+Production Claim
+   ↓
+Actual Composition
+   ↓
+Artifact Integrity
+   ↓
+Verification Result
+   ↓
+Human Review
+```
+
+- **Expected** — established independently, not read from the production claim.
+- **Production Claim** — what the production step says it used; never trusted on its own.
+- **Actual Composition** — a record of what was genuinely produced, kept separate from the claim.
+- **Artifact Integrity** — the rendered file is checked against that record, so a technically valid file that was altered or swapped afterward is still caught.
+- A mismatch anywhere in this chain blocks the result rather than passing silently.
+
+**Verification success makes the result ready for human review; it does not automatically approve or publish the content.** This capability is available to production; it does not mean every live brief automatically uses the illustrated path, and hybrid composition remains a future step.
 
 ---
 
@@ -288,6 +316,7 @@ The private implementation is actively evolving and is ahead of this sanitized p
 - ✅ production-facing visual-intent routing capability (Production Intent → Visual Routing Policy → Approved Visual Mode/Asset)
 - ✅ production workflow now carries visual intent from content strategy into production and resolves it through that routing layer
 - ✅ approved illustrated vehicle assets can be composed into real rendered visual output
+- ✅ composed illustrated output can be independently verified against production intent and actual composition provenance before Human Review
 
 ### Current focus
 
@@ -307,7 +336,7 @@ The first production integration is intentionally planned to stop at **Awaiting 
 
 No Publisher is part of that stage.
 
-Production visual intent now flows from content strategy into the production workflow, is resolved through the routing layer described above, and approved illustrated assets can be composed into real rendered visual output. Extending this into Verifyer validation and a dedicated Human Review path for composed illustrated output remains the next step.
+Production visual intent now flows from content strategy into the production workflow, is resolved through the routing layer described above, and approved illustrated assets can be composed into real rendered visual output. That composed output can now also be independently verified against intent and actual composition provenance ahead of Human Review, using the trust model described above. Completing hybrid composition, deeper Verifyer integration, and any future Publisher stage remain later work — none of it is part of this milestone.
 
 ---
 
